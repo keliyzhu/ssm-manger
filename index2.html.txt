@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>企业信息管理</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>企业信息管理</h1>
+
+    <!-- 添加企业按钮 -->
+    <button onclick="openUploadModal('add')">添加企业</button>
+
+    <!-- 搜索按钮 -->
+    <button onclick="openUploadModal('search')">搜索</button>
+
+    <table id="companyTable">
+        <!-- 表头省略 -->
+        <tbody id="companyList">
+            <!-- 数据会通过 JavaScript 填充 -->
+        </tbody>
+    </table>
+
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeUploadModal()">&times;</span>
+            <input type="file" id="excelFile" accept=".xlsx, .xls">
+            <button onclick="uploadFile()">上传</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
